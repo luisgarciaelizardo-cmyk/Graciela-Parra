@@ -28,10 +28,12 @@ body {
   padding-block: max(24px, env(safe-area-inset-top, 0px)) max(24px, env(safe-area-inset-bottom, 0px));
   padding-inline: 16px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  gap: 20px;
   font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
   background: radial-gradient(circle at 50% 0%, var(--bg-2), var(--bg-1) 60%);
+  background-attachment: fixed;
   color: var(--ink);
 }
 
@@ -137,15 +139,124 @@ body {
 .btn-facebook .icon { color: var(--facebook); }
 .btn-location .icon { color: var(--gold); }
 
-footer {
-  margin-top: 26px;
+.btn-services {
+  background: var(--olive-dark);
+  color: var(--cream-soft);
 }
 
-footer p {
+/* Services section */
+
+.services {
+  width: 100%;
+  max-width: 420px;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px 22px 30px;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.services-header .kicker {
+  margin: 0 0 2px;
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.services-header h2 {
+  margin: 0 0 12px;
+  font-size: 24px;
+  color: var(--olive-dark);
+}
+
+.services-header .bio {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  text-align: left;
+}
+
+.service-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.service {
+  border: 1px solid rgba(185, 154, 91, 0.35);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--cream-soft);
+}
+
+.service summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 13px 16px;
+  font-weight: 600;
+  color: var(--olive-dark);
+}
+
+.service summary::-webkit-details-marker { display: none; }
+
+.service summary::after {
+  content: "+";
+  flex: none;
+  font-size: 18px;
+  line-height: 1;
+  color: var(--gold);
+  transition: transform 0.15s ease;
+}
+
+.service[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.service-name {
+  font-size: 14.5px;
+}
+
+.service-price {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+.service p {
+  margin: 0;
+  padding: 0 16px 16px;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+.cta-book {
+  margin-top: 22px;
+  justify-content: center;
+}
+
+.site-footer {
+  padding-bottom: 8px;
+}
+
+.site-footer p {
   margin: 0;
   font-size: 12px;
   color: var(--ink-soft);
   line-height: 1.5;
+  text-align: center;
 }
 
 @media (prefers-color-scheme: dark) {
