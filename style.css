@@ -60,39 +60,16 @@ body {
 
 .brand-lockup {
   position: relative;
-  background: linear-gradient(160deg, var(--olive), var(--olive-dark));
-  color: var(--cream);
   border-radius: 14px;
-  padding: 26px 20px 22px;
+  overflow: hidden;
   margin: 0 0 22px;
+  line-height: 0;
 }
 
-.kicker {
-  margin: 0 0 6px;
-  font-family: "EB Garamond", Georgia, serif;
-  font-size: 13px;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  color: var(--cream);
-  opacity: 0.9;
-}
-
-.brand-name {
-  margin: 0 0 10px;
-  font-family: "Playfair Display", Georgia, serif;
-  font-weight: 600;
-  font-size: 34px;
-  line-height: 1.12;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: var(--cream);
-}
-
-.monogram {
-  width: 44px;
-  height: 30px;
-  color: var(--cream);
-  opacity: 0.9;
+.logo {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .tagline {
